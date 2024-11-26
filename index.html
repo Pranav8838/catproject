@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT</title>
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--  class="font-[Poppins] text-[16px] leading-[24px] text-[white] bg-[#cbae00] py-3 px-2 rounded-md" -->
+    
+ <section class="py-5 hero">
+    <div class="2xl:container mx-auto h-[100%]">
+        <div class="w-[90%] mx-auto grid grid-cols-1 h-[100%]">
+            <div class=" flex flex-col justify-center items-center text-center gap-3">
+             <!-- bulb image -->
+         <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt="" class="h-24" id="bulb">
+    
+    
+         <!-- cat image -->
+         <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="" class="h-52" id="cat">
+         <div class="bg-[rgb(123,135,148)]  py-7 px-5 rounded-lg space-x-2 space-y-2">
+      
+       <p id="para" class="font-[Poppins] text-[16px] leading-[24px] text-[white] ">Switched On</p>
+      
+       <button id="off"  class="font-[Poppins] text-[16px] leading-[24px] text-[white] bg-red-700 py-3 px-2 rounded-md">OFF</button>
+       <button id="on" class="font-[Poppins] text-[16px] leading-[24px]  text-[white] bg-green-600 py-3 px-2 rounded-md">ON</button>
+       </div>
+       </div>
+        </div>
+      </div>
+ </section>
+   
+     <script>
+        const bulbelement=document.getElementById("bulb")
+        const catelement=document.getElementById("cat")
+
+        const paraelement=document.getElementById("para")
+
+        const btnon=document.getElementById("on")
+        const btnoff=document.getElementById("off")
+
+        console.log(btnon);
+        
+        btnoff.addEventListener("click",()=>{
+            console.log(bulbelement);
+            
+             bulbelement.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png"
+             catelement.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png"
+             paraelement.textContent="Switched OFF"
+           
+        })
+        btnon.addEventListener("click",()=>{
+            console.log(bulbelement);
+            
+             bulbelement.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png"
+             catelement.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png"
+             paraelement.textContent="Switched ON"
+
+        })   
+     </script>
+
+     <style>
+        /* body{
+            background-color: black;
+        } */
+     </style>
+</body>
+</html>
